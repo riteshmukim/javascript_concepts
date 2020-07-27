@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      #container {
+        display: flex;
+        flex-flow: row wrap;
+        max-width: 1200px;
+        height: 50vh;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid black;
+        justify-content: center;
+        margin: auto;
+      }
+      .flex-item {
+        width: 33%;
+        border: 1px solid blue;
+        flex: 1 0 auto;
+      }
+
+      @media screen and (max-device-width: 768px) {
+        .flex-item {
+          width: 100%;
+        }
+        #container {
+          flex-flow: column nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="flex-item"></div>
+      <div class="flex-item"></div>
+      <div class="flex-item"></div>
+    </div>
+  </body>
+</html>
